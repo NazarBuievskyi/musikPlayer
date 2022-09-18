@@ -1,0 +1,19 @@
+import React from 'react';
+import {LibrarySong} from "./LibrarySong";
+import {IMusic} from "../music";
+
+type LibraryProps = {
+    songs: IMusic[]
+
+}
+
+export function Library({songs}: LibraryProps) {
+    return (
+        <div className='library'>
+            <h2>Library</h2>
+            <div className="library-songs">
+                {songs.map(song => <LibrarySong song={song}/>)}
+            </div>
+        </div>
+    )
+}
